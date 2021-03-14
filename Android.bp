@@ -1,0 +1,17 @@
+subdirs = [
+    "jni",
+]
+android_app {
+    name: "TestNativeDaemon",
+    srcs: ["src/**/*.java"],
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx-constraintlayout_constraintlayout",
+    ],
+    jni_libs: ["libjni_testapp"],
+    optimize: {
+        enabled: false,
+    },
+    platform_apis: true,
+}
+
